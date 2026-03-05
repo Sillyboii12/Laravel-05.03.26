@@ -22,6 +22,9 @@ Route::get('/test', function (){
 });
 
 
-Route::get('/comments', [CommentController::class, 'index']);
+Route::get('/comments/list', [CommentController::class, 'index']);
 Route::get('/comments/create', [CommentController::class, 'create']);
 Route::post('/comments', [CommentController::class, 'store']);
+Route::delete('/comments/delete/{id}', [CommentController::class, 'delete']);
+Route::get('/comments/update/{id}', [CommentController::class, 'comment']);
+Route::post('/comments/update/{id}', [CommentController::class, 'update']);
